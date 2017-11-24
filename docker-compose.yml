@@ -56,8 +56,9 @@ services:
       - elasticsearch
     volumes:
       - "./wordpress:/var/www/html"
-      - "./config/wp-gears-worker/php.ini:/usr/local/etc/php/php.ini"
-      - "./config/wp-gears-worker/supervisord.conf:/etc/supervisor/supervisord.conf"
-      - "./config/wp-gears-worker/conf.d:/etc/supervisor/conf.d"
+      - "./config/wp-minions-worker/php.ini:/usr/local/etc/php/php.ini"
+      - "./config/wp-minions-worker/supervisord.conf:/etc/supervisor/supervisord.conf"
+      - "./config/wp-minions-worker/conf.d:/etc/supervisor/conf.d"
+      - "./config/wp-minions-worker/gearman-job-server:/etc/default/gearman-job-server"
     restart: always
     build: ./dockerfiles/wp-gears-worker
