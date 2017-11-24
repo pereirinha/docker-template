@@ -42,7 +42,7 @@ Default Elasticsearch connection information (from within PHP-FPM container):
 
 It's easy to set up WP Gears using this docker configuration - just run the following commands from the `wordpress` folder.
 
-1. Clone the WP Minios plugin to the plugins directory - `git clone https://github.com/10up/WP-Minios.git wp-content/plugins/wp-minions`
+1. Clone the WP Minions plugin to the plugins directory - `git clone https://github.com/10up/WP-Minions.git wp-content/plugins/wp-minions`
 2. Symlink the worker file to the web root - `ln -s wp-content/plugins/wp-minions/wp-minions-runner.php .`
 3. Add the following to `config/wp-minions-worker/conf.d/wp-minions.ini`
 
